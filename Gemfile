@@ -10,6 +10,7 @@ gem "pg"
 gem "sass"
 gem "sinatra-assetpack"
 gem "carrierwave"
+gem "bcrypt"
 
 group :development do
   gem "tux", "~> 0.3.0"
