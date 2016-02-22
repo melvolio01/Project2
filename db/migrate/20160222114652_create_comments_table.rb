@@ -6,6 +6,8 @@ class CreateCommentsTable < ActiveRecord::Migration
       t.text      :issue
       t.integer   :rating
       t.integer   :property_id
+
+      t.timestamps
     end
   end
 end

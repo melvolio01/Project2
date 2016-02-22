@@ -6,8 +6,10 @@ class CreatePropertyTable < ActiveRecord::Migration
       t.string    :postcode
       t.string    :borough
       t.integer   :landlord_id
-      t.image     :property_image
+      t.text      :property_image
       t.integer   :comment_id
+
+      t.timestamps
     end
   end
 end

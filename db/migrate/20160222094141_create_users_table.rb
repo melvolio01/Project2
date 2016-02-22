@@ -5,7 +5,7 @@ class CreateUsersTable < ActiveRecord::Migration
       t.string    :password
       t.string    :email_address
       t.text      :bio
-      t.image     :avatar
+      t.text      :avatar
 
       t.timestamps
     end
