@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222115357) do
+ActiveRecord::Schema.define(version: 20160222135548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20160222115357) do
     t.integer "rating"
     t.string  "name"
     t.string  "borough"
-    t.integer "comment_id"
   end
 
   create_table "properties", force: :cascade do |t|
@@ -41,7 +40,6 @@ ActiveRecord::Schema.define(version: 20160222115357) do
     t.string   "borough"
     t.integer  "landlord_id"
     t.text     "property_image"
-    t.integer  "comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -5,7 +5,6 @@ class CreateLandlordTable < ActiveRecord::Migration
       t.integer   :rating
       t.string    :name
       t.string    :borough
-      t.integer   :comment_id
 
       t.timestamp
     end

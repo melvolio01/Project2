@@ -22,3 +22,6 @@ APP_NAME = APP_ROOT.basename.to_s
 configure do
   set :views, File.join(APP_ROOT, "app", "views")
 end
+
+["models", "controllers", "helpers"].each do |folder|Dir[APP_ROOT.join("app", folder, "*.rb")].each {|file| require file}
+end
