@@ -1,3 +1,4 @@
 class Property < ActiveRecord::Base
-  belongs_to   :landlords
+  belongs_to  :landlord
+  has_many    :comments
 end

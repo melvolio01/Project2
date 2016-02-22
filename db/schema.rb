@@ -11,10 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222094141) do
+ActiveRecord::Schema.define(version: 20160222115357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "landlord_id"
+    t.integer  "user_id"
+    t.text     "issue"
+    t.integer  "rating"
+    t.integer  "property_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "landlords", force: :cascade do |t|
+    t.integer "property_id"
+    t.integer "rating"
+    t.string  "name"
+    t.string  "borough"
+    t.integer "comment_id"
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "postcode"
+    t.string   "borough"
+    t.integer  "landlord_id"
+    t.text     "property_image"
+    t.integer  "comment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

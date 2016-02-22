@@ -1,6 +1,6 @@
 class CreatePropertyTable < ActiveRecord::Migration
   def change
-    create_table  :comments do |t|
+    create_table  :properties do |t|
       t.string    :address1
       t.string    :address2
       t.string    :postcode
