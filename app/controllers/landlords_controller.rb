@@ -1,6 +1,5 @@
 # Index
 get '/landlords' do
-  authorize!
   @landlords = Landlords.all
   erb :'landlords/index'
 end
@@ -25,7 +24,6 @@ end
 
 # Show
 get '/landlords/:id' do
-  authorize!
   @landlord = Landlord.find(params[:id])
   if @landlord
     erb :'landlords/show'

@@ -1,6 +1,5 @@
 # Index
 get '/properties' do
-  authorize!
   @properties = Properties.all
   erb :'properties/index'
 end
@@ -25,7 +24,6 @@ end
 
 # Show
 get '/properties/:id' do
-  authorize!
   @property = Property.find(params[:id])
   if @property
     erb :'properties/show'
