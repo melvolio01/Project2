@@ -2,24 +2,17 @@
 
 <h2><a href="/landords/new">New</a></h2>
 
-<h2><a href="/landlords/:id">Show landlord</a></h2>
-
-<h2><a href="/">Home</a></h2>
-
 <% @landlords.each do |landlord| %>
   <ul>
     <li>Name: <%= landlord.name %></li>
     <li>Rating: <%= landlord.rating %></li>
     <li>Borough: <%= landlord.borough %></li>
 
-    <a href="/landlords/<%= landlord.id %>">  See info</a>
-    <li><a href="/landlords/<%= landlord.id %>/edit">edit</a></li>
+    <a href="/landlords/<%= landlord.id %>">  Landlord info</a>
+    <li><a href="/landlords/<%= landlord.id %>/edit">Edit</a></li>
   </ul>
     <br>
 
-
 <% end %>
 
-<ul>
-    <li><a href="/">Home</a></li>
-  </ul>
+ <li><a href="/landlords/new">Add New Landlord</a></li>
