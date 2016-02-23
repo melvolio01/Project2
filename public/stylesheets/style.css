@@ -1,0 +1,9 @@
+body { background-color: #fffff0; }
+
+#menu { width: 1000px; height: 35px; font-size: 16px; font-family: Tahoma; text-align: center; }
+
+#menu ul { height: auto; padding: 8px 0px; margin: 0px; }
+
+#menu li { display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */
