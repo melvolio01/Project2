@@ -7,4 +7,25 @@
   <button class="btn btn-default">Go</button>
   </form>
 
-  
+<% @properties.each do |property| %>
+  <ul>
+    <li>address1: <%= property.address1 %></li>
+    <li>address2: <%= property.address2 %></li>
+    <li>postcode: <%= property.postcode %></li>
+    <li>borough: <%= property.borough %></li>
+    <li>property_image: <%= property.property_image %></li>
+
+    <a href="/properties/<%= property.id %>">  Property info</a>
+    <li><a href="/properties/<%= property.id %>/edit">Edit</a></li>
+  </ul>
+    <br>
+
+<% end %>
+
+
+    <!-- t.string   "address1"
+    t.string   "address2"
+    t.string   "postcode"
+    t.string   "borough"
+    t.integer  "landlord_id"
+    t.text     "property_image" -->
