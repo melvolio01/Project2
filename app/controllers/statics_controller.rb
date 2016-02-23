@@ -15,5 +15,9 @@ get '/search_properties.erb' do
 end
 
 get'/user' do
-  erb :'static/user'
+  # @user = User.find(params[:id])
+  # if @user.update(params[:user])
+  #   redirect "statics/users/#{@user.id}"
+  # else
+  erb :'/static/user'
 end
