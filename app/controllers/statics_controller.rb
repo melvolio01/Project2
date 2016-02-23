@@ -13,3 +13,7 @@ end
 get '/search_properties.erb' do
   erb :'static/search_properties'
 end
+
+get'/user' do
+  erb :'static/user'
+end
