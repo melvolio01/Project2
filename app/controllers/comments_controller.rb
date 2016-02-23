@@ -17,5 +17,11 @@ post '/landlords:id/comments' do
 end
 
 
+# Delete
+delete '/landlords:id/comments/:id'do
+  authorize!
+  @comment = Comment.delete(params[:comment])
+  erb :'comments/delete'
+end
 
 
