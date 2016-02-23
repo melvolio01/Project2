@@ -45,13 +45,13 @@ get "/landlords/:id/edit" do
   erb :"landlords/edit"
 
 # Update
-put '/landlords/:id' do
-  # authorize!
-  @landlord = Landlord.find(params[:id])
-  if @landlord.update(params[:landlord])
-    redirect "/landlords/#{@landlord.id}"
-  else
-    erb :'landlords/show'
-    end
-  end  
+# put "/landlords/:id" do
+#   # authorize!
+#   @landlord = Landlord.find(params[:id])
+#   if @landlord.update(params[:landlord])
+#     redirect "/landlords/#{@landlord.id}"
+#   else
+#     erb :'landlords/show'
+#     end
+#   end  
 end

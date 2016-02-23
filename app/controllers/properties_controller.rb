@@ -17,15 +17,16 @@ get '/properties/new' do
 end
 
 # Create
-post '/properties' do
-  authorize!
+post '/properties/new' do
+  # authorize!
   @property = Property.new(params[:property])
   if @property.save
     redirect "/properties"
   else
     erb :'properties/new'
-  end  
-end
+  end 
+end 
+
 
 # Show
 get '/properties/:id' do
