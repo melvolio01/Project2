@@ -1,6 +1,10 @@
 # Index
 get '/landlords' do
-  @landlords = Landlord.all
+ if params[:search] && !params[:search].empty?
+  @landlords = Landlord.where("rating ILIKE :search OR name ILIKE :search OR borough ILIKE :search", {search: "%#{params[:search]}%"})
+  else
+    @landlords = Landlord.all
+  end
   erb :'landlords/index'
 end
 

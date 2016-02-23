@@ -2,6 +2,12 @@
 
 <h2><a href="/landords/new">New</a></h2>
 
+<form id="search-form" class= "form-inline" action="/landlords">
+  <input type="text" name="search" placeholder="Search" value="<%= params[:search] %>" class="form-control">
+  <button class="btn btn-default">Go</button>
+  </form>
+
+
 <% @landlords.each do |landlord| %>
   <ul>
     <li>Name: <%= landlord.name %></li>
