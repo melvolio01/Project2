@@ -1,12 +1,12 @@
 # Index
 get '/properties' do
-  @properties = Properties.all
+  @properties = Property.all
   erb :'properties/index'
 end
 
 # New
 get '/properties/new' do
-  authorize!
+  # authorize!
   @property = Property.new
   erb :'properties/new'
 end
