@@ -18,7 +18,7 @@ end
 
 
 # Create
-post '/landlords' do
+post '/landlords/new' do
   # authorize!
   @landlord = Landlord.new(params[:landlord])
   if @landlord.save
