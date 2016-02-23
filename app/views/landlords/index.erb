@@ -1,12 +1,13 @@
-<h1>Landlords Index</h1>
-
-<h2><a href="/landords/new">New</a></h2>
+<br>
+<br>
 
 <form id="search-form" class= "form-inline" action="/landlords">
   <input type="text" name="search" placeholder="Search" value="<%= params[:search] %>" class="form-control">
   <button class="btn btn-default">Go</button>
   </form>
+  <br>
 
+<li class="New Landlord"><a href="/landlords/new">New Landlord</a></li>
 
 <% @landlords.each do |landlord| %>
   <ul>

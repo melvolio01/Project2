@@ -7,6 +7,8 @@
   <button class="btn btn-default">Go</button>
   </form>
 
+<li><a href="/properties">Back to property index</a></li>
+
 <% @properties.each do |property| %>
   <ul>
     <li>Address 1: <%= property.address1 %></li>
@@ -22,6 +24,7 @@
 
 <% end %>
 
+  <li><a href="/properties/new">Add New Property</a></li>
 
     <!-- t.string   "address1"
     t.string   "address2"
