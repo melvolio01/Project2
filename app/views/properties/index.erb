@@ -1,3 +1,10 @@
 <h1>Properties index</h1>
 
 <h2><a href='/properties/new'>New Property</a></h2>
+
+<form id="search-form" class= "form-inline" action="/properties">
+  <input type="text" name="search" placeholder="Search" value="<%= params[:search] %>" class="form-control">
+  <button class="btn btn-default">Go</button>
+  </form>
+
+  

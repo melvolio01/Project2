@@ -1,6 +1,11 @@
 # Index
 get '/properties' do
-  @properties = Property.all
+
+  if params[:search] && !params[:search].empty?
+  @properties = Property.where("address1 ILIKE :search OR address2 ILIKE :search OR postcode ILIKE :search OR borough ILIKE :search", {search: "%#{params[:search]}%"})
+  else
+    @properties = Property.all
+  end
   erb :'properties/index'
 end
 
