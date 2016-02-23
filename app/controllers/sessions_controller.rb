@@ -10,7 +10,7 @@ post '/login' do
   if user && user.authenticate(params[:user][:password])
     session[:user_id] = user.user_id
     flash[:success] = "Welcome!"
-    redirect "/users/#{user.id}"
+    redirect "/user/#{user.id}"
   else
 
     flash[:danger] = "Username or password incorrect"
