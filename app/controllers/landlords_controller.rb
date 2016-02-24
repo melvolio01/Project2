@@ -33,6 +33,7 @@ get '/landlords/:id' do
   @landlord = Landlord.find(params[:id])
   @comments = @landlord.comments
   @properties = @landlord.properties
+
   if @landlord
     erb :'landlords/show'
   else
@@ -57,3 +58,11 @@ post "/landlords/:id" do
     erb :'landlords/show'
     end
   end  
+
+# Delete
+delete "/landlords/:id/delete" do
+  # authorize!
+  @landlord = Landlord.find(params[:id])
+  @landlord.destroy  
+  redirect "/landlords"
+end

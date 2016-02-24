@@ -17,6 +17,11 @@
     <a href="/landlords/<%= landlord.id %>">  Landlord info</a>
     <li><a href="/landlords/<%= landlord.id %>/edit">Edit</a></li>
     <li><a href="/landlords/<%= landlord.id %>/comments/new">Add a comment</a></li>
+    <form class="delete" method="post" action="/landlords/<%= landlord.id %>/delete">
+      <input type="hidden" name="_method" value="delete"></input>
+      <button type="submit">delete</button>
+     </form>
+
   </ul>
     <br>
 

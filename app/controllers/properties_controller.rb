@@ -55,5 +55,13 @@ if @property.update(params[:property])
    else
     erb :'properties/show'
      end
-  end  
+  end
+end
+
+# Delete
+delete "/properties/:id/delete" do
+  # authorize!
+  @property = Property.find(params[:id])
+  @property.destroy  
+  redirect "/properties"
 end

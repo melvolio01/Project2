@@ -16,20 +16,20 @@
     <li>Borough: <%= property.borough %></li>
     <li>Property Image: <%= property.property_image %></li>
     <% if property.landlord %>
-    <li>Landlord: <%= property.landlord.name %></li> 
+     <li>Landlord: <%= property.landlord.name %></li> 
     <% end %>
 
     <a href="/properties/<%= property.id %>">  Property info</a>
     <li><a href="/properties/<%= property.id %>/edit">Edit</a></li>
+     <li>
+     <form class="delete" method="post" action="/properties/<%= property.id %>/delete">
+      <input type="hidden" name="_method" value="delete"></input>
+      <button type="submit">delete</button>
+     </form>
+
+     </li>
   </ul>
 
 <% end %>
 
   <li><a href="/properties/new">Add New Property</a></li>
-
-    <!-- t.string   "address1"
-    t.string   "address2"
-    t.string   "postcode"
-    t.string   "borough"
-    t.integer  "landlord_id"
-    t.text     "property_image" -->
