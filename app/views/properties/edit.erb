@@ -1,15 +1,21 @@
+<br>
+<br>
+
 <form id="edit" method="post" action="/properties/<%= @property.id %>">
   <div class="form-group">
     <label for="address1">1st line of address</label>
-    <input name="property[address1]" type="text" class="form-control" id="address1" placeholder="1st line of address">
+    <input name="property[address1]" type="text" class="form-control" id="address1" placeholder="1st line of address"
+    value="<%= @property.address1 %>" >
   </div>
   <div class="form-group">
     <label for="address2">2nd line of address</label>
-    <input name="property[address2]" type="text" class="form-control" id="address2" placeholder="2nd line of address">
+    <input name="property[address2]" type="text" class="form-control" id="address2" placeholder="2nd line of address"
+    value="<%= @property.address2 %>">
   </div>
   <div class="form-group">
     <label for="property[postcode]">Postcode</label>
-    <input name="property[postcode]" type="text" class="form-control" id="postcode" placeholder="Postcode">
+    <input name="property[postcode]" type="text" class="form-control" id="postcode" placeholder="Postcode"
+    value="<%= @property.postcode %>">
   </div>
   <div class="form-group">
     <label for="profile_pic">Profile Pic</label>

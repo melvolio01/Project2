@@ -12,7 +12,6 @@
 <% @landlords.each do |landlord| %>
   <ul>
     <li>Name: <%= landlord.name %></li>
-    <li>Rating: <%= landlord.rating %></li>
     <li>Borough: <%= landlord.borough %></li>
 
     <a href="/landlords/<%= landlord.id %>">  Landlord info</a>

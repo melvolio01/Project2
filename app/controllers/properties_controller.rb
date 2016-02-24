@@ -46,14 +46,14 @@ get "/properties/:id/edit" do
   @landlords = Landlord.all
   erb :"properties/edit"
 
-# # Update
-# put '/properties/:id' do
-#   # authorize!
-#   @property = Property.find(params[:id])
-#   if @property.update(params[:property])
-#     redirect "/properties/#{@property.id}"
-#   else
-#     erb :'properties/show'
-#     end
-#   end  
+Update
+post '/properties/:id' do
+ # authorize!
+@property = Property.find(params[:id])
+if @property.update(params[:property])
+  redirect "/properties/#{@property.id}"
+   else
+    erb :'properties/show'
+     end
+  end  
 end
