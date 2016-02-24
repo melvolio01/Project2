@@ -43,6 +43,7 @@ end
 get "/properties/:id/edit" do
   # authorize!
   @property = Property.find(params[:id])
+  @landlords = Landlord.all
   erb :"properties/edit"
 
 # # Update

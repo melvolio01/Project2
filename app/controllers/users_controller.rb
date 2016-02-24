@@ -1,11 +1,29 @@
+# New
+get '/users/new' do
+  authorize!
+  @user = User.new
+  erb :'users/new'
+end
+
+# Create
+post '/users' do
+  authorize!
+  @user = User.new(params[:user])
+  if @user.save
+    redirect "/users"
+  else
+    erb :'users/new'
+  end  
+end
+
 # Show
-get '/users' do
+get "/users/" do
   authorize!
   @user = User.find(params[:id])
   if @user
     erb :'users/show'
   else
-    redirect "/users"
+    redirect "/users/"
   end
 end
 
