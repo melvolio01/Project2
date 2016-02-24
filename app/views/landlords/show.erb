@@ -6,8 +6,8 @@
   <%= property.postcode %>
 <% end%>
 
-<% @comments.each do |comment| %>
   <h3>User feedback:</h3> 
+<% @comments.each do |comment| %>
   <h4>Comment:</h4><%= comment.issue %>
   <h4>Rating:</h4> <%= comment.rating %>
 

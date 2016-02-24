@@ -12,8 +12,8 @@ post '/landlords/:id/comments' do
   authorize!
   @comment = Comment.new(params[:comment])
   if @comment.save
-    @comment.user = current_user
-    redirect "/landlords/:id"
+    @comment.landlord_id = params[:id]
+    redirect "/landlords/#{params[:id]}"
   else
     erb :'comments/new'
   end  

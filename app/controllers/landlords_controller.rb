@@ -42,14 +42,14 @@ end
 
 # Edit
 get "/landlords/:id/edit" do
-  # authorize!
+  authorize!
   @landlord = Landlord.find(params[:id])
   erb :"landlords/edit"
 end
 
 # Update
 post "/landlords/:id" do
-  # authorize!
+  authorize!
   @landlord = Landlord.find(params[:id])
   if @landlord.update(params[:landlord])
     redirect "/landlords/#{@landlord.id}"
@@ -60,7 +60,7 @@ post "/landlords/:id" do
 
 # Delete
 delete "/landlords/:id/delete" do
-  # authorize!
+  authorize!
   @landlord = Landlord.find(params[:id])
   @landlord.destroy  
   redirect "/landlords"

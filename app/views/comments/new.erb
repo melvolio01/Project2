@@ -1,12 +1,12 @@
 <h1>New Comment</h1>
 
-<form id="new" method="post" action="/landlords/new">
+<form id="new" method="post" action="/landlords/<%= params[:id] %>/comments">
 
   <input type="hidden" name="comment[landlord_id]" value="<%= params[:id] %>">
   
   <div class="form-group">
     <label for="comment[issue]">Feedback</label>
-    <textarea name="comment[name]" placeholder="Enter Feedback here"></textarea>
+    <textarea name="comment[issue]" placeholder="Enter Feedback here"></textarea>
   </div>
     
   <div class="form-group">
