@@ -13,6 +13,7 @@ end
 get '/properties/new' do
   # authorize!
   @property = Property.new
+  @landlords = Landlord.all
   erb :'properties/new'
 end
 

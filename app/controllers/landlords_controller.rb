@@ -1,7 +1,7 @@
 # Index
 get '/landlords' do
  if params[:search] && !params[:search].empty?
-  @landlords = Landlord.where("rating ILIKE :search OR name ILIKE :search OR borough ILIKE :search", {search: "%#{params[:search]}%"})
+  @landlords = Landlord.where("name ILIKE :search OR borough ILIKE :search", {search: "%#{params[:search]}%"})
   else
     @landlords = Landlord.all
   end

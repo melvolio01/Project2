@@ -6,10 +6,11 @@ get '/landlords/:id/comments/new' do
   end
 
 # Create
-post '/landlords:id/comments' do
+post '/landlords/:id/comments' do
   # authorize!
   @comment = Comment.new(params[:comment])
   if @comment.save
+    @comment.user = current_user
     redirect "/landlords/:id"
   else
     erb :'comments/new'

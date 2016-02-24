@@ -16,11 +16,13 @@
     <li>Postcode: <%= property.postcode %></li>
     <li>Borough: <%= property.borough %></li>
     <li>Property Image: <%= property.property_image %></li>
+    <% if property.landlord %>
+    <li>Landlord: <%= property.landlord.name %></li>
+    <% end %>
 
     <a href="/properties/<%= property.id %>">  Property info</a>
     <li><a href="/properties/<%= property.id %>/edit">Edit</a></li>
   </ul>
-    <br>
 
 <% end %>
 
