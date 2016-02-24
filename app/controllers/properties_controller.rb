@@ -58,6 +58,17 @@ put "/properties/:id" do
       end
   end
 
+# put "/landlords/:id" do
+#   authorize!
+#   @landlord = Landlord.find(params[:id])
+#   if @landlord.update(params[:landlord])
+#     redirect "/landlords/#{@landlord.id}"
+#   else
+#     erb :'landlords/show'
+#   end
+# end  
+
+
 
 # Delete
 delete "/properties/:id/delete" do
