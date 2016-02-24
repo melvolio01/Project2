@@ -35,7 +35,7 @@ get '/properties/:id' do
   @property = Property.find(params[:id])
   if @property
     erb :'properties/show'
-  else
+    else
     redirect "/properties"
   end
 end
@@ -46,16 +46,16 @@ get "/properties/:id/edit" do
   @property = Property.find(params[:id])
   @landlords = Landlord.all
   erb :"properties/edit"
+end
 
-
-post "/properties/:id" do
+put "/properties/:id" do
  authorize!
-@property = Property.find(params[:id])
-if @property.update(params[:property])
-  redirect "/properties/#{@property.id}"
-   else
-    erb :'properties/show'
-     end
+  @property = Property.find(params[:id])
+  if @property.update(params[:property])
+    redirect "/properties/#{@property.id}"
+    else
+      erb :'properties/show'
+      end
   end
 
 
@@ -66,4 +66,3 @@ delete "/properties/:id/delete" do
   @property.destroy  
   redirect "/properties"
   end
-end
