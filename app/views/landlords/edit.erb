@@ -1,1 +1,59 @@
 <h1>Landlords edit</h1>
+
+<form id="edit" method="post" action="/landlords/<%= @landlord.id %>">
+  <div class="form-group">
+    <label for="name">Landlord Name</label>
+    <input name="landlord name" type="text"
+    class="form-control" id="landlord name"
+    placeholder="landlord name"
+    value="<%= @landlord.name %>">
+
+  </div>
+
+  <div class="form-group">
+    <label for="rating" action="/landlords/<%= @landlord.id %>" value="<%= @landlord.rating %>">Landlord rating (0-5)</label>
+    <input name="rating" type="radio" class="form-control" value=0>0
+    <input name="rating" type="radio" class="form-control" value=1>1<input name="rating" type="radio" class="form-control" value=2>2
+    <input name="rating" type="radio" class="form-control" value=3>3
+    <input name="rating" type="radio" class="form-control" value=4>4
+    <input name="rating" type="radio" class="form-control" value=5>5
+
+  </div>
+
+
+   <div class="form-group">Borough
+    <select name="Borough">
+      <option value="Barking & Dagenham">Barking & Dagenham</option>
+      <option value="Barnet">Barnet</option>
+      <option value="Bexley">Bexley</option>
+      <option value="Brent">Brent</option>
+      <option value="Bromley">Bromley</option>
+      <option value="Camden">Camden</option>
+      <option value="Croydon">Croydon</option>
+      <option value="Ealing">Ealing</option>
+      <option value="Enfield">Enfield</option>
+      <option value="Greenwich">Greenwich</option>
+      <option value="Hackney">Hackney</option>
+      <option value="Hammersmith & Fulham">Hammersmith & Fulham</option>
+      <option value="Haringey">Haringey</option>
+      <option value="Hillingdon">Hillingdon</option>
+      <option value="Hounslow">Hounslow</option>
+      <option value="Islington">Islington</option>
+      <option value="Kensington and Chelsea">Kensington and Chelsea</option>
+      <option value="Kingston upon Thames">Kingston upon Thames</option>
+      <option value="Lambeth">Lambeth</option>
+      <option value="Lewisham">Lewisham</option>
+      <option value="Merton">Merton</option>
+      <option value="Newham">Newham</option>
+      <option value="Redbridge">Redbridge</option>
+      <option value="Richmond upon Thames">Richmond upon Thames</option>
+      <option value="Southwark">Southwark</option>
+      <option value="Sutton">Sutton</option>
+      <option value="Tower Hamlets">Tower Hamlets</option>
+      <option value="Waltham Forest">Waltham Forest</option>
+      <option value="Wandsworth">Wandsworth</option>
+      <option value="Westminster">Westminster</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-default">Edit landlord</button>
+</form>

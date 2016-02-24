@@ -13,3 +13,13 @@ Tuesday to do list
 5. Comments - should they be added on new? If so, add comments field to properties and landlords (&update models?) Makes sense to add comments after search results?
 
 
+Status at end of Tuesday
+Some progress made, most restful routes on site are now active. 
+
+The main issues to resolve on Wednesday are as follows:
+1. Log-in/registration - not working properly, haven't been able to add new users and photos don't appear to be adding correctly
+2. Having issues 'putting' information into the database, either by creation of new records (eg can make new property record but it shows as blank record on index page) or posting updates once edits done
+3. Comments - have added in fields so that comments can be added but, again, these aren't being rendered on the site
+4. Links between models - working on Tux so they should be OK, just getting confused re how to link, eg landlord/property ids through the site.
+
+
