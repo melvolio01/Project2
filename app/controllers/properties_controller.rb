@@ -5,13 +5,14 @@ get '/properties' do
   @properties = Property.where("address1 ILIKE :search OR address2 ILIKE :search OR postcode ILIKE :search OR borough ILIKE :search", {search: "%#{params[:search]}%"})
   else
     @properties = Property.all
+    @landlords = Landlord.all
   end
   erb :'properties/index'
 end
 
 # New
 get '/properties/new' do
-  # authorize!
+  authorize!
   @property = Property.new
   @landlords = Landlord.all
   erb :'properties/new'
@@ -19,7 +20,7 @@ end
 
 # Create
 post '/properties/new' do
-  # authorize!
+  authorize!
   @property = Property.new(params[:property])
   if @property.save
     redirect "/properties"
@@ -41,14 +42,14 @@ end
 
 # Edit
 get "/properties/:id/edit" do
-  # authorize!
+  authorize!
   @property = Property.find(params[:id])
   @landlords = Landlord.all
   erb :"properties/edit"
 
 Update
 post '/properties/:id' do
- # authorize!
+ authorize!
 @property = Property.find(params[:id])
 if @property.update(params[:property])
   redirect "/properties/#{@property.id}"
@@ -60,7 +61,7 @@ end
 
 # Delete
 delete "/properties/:id/delete" do
-  # authorize!
+  authorize!
   @property = Property.find(params[:id])
   @property.destroy  
   redirect "/properties"

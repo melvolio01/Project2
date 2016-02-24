@@ -10,16 +10,15 @@ end
 
 # New
 get '/landlords/new' do
-  # authorize!
+  authorize!
   @landlord = Landlord.new
   erb :'landlords/new'
 end
 
 
-
 # Create
 post '/landlords/new' do
-  # authorize!
+  authorize!
   @landlord = Landlord.new(params[:landlord])
   if @landlord.save
     redirect "/landlords"

@@ -1,6 +1,6 @@
 # New comment - to be added through the landlord pages of the site
 get '/landlords/:id/comments/new' do
-  # authorize!
+  authorize!
   landlord_id = params[:id]
   landlord = Landlord.find(landlord_id)
   @properties = landlord.properties
@@ -9,7 +9,7 @@ get '/landlords/:id/comments/new' do
 
 # Create
 post '/landlords/:id/comments' do
-  # authorize!
+  authorize!
   @comment = Comment.new(params[:comment])
   if @comment.save
     @comment.user = current_user
@@ -22,7 +22,7 @@ end
 
 # Delete
 delete '/landlords:id/comments/:id'do
-  # authorize!
+  authorize!
   @comment = Comment.delete(params[:comment])
   erb :'comments/delete'
 end

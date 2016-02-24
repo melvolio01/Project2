@@ -17,13 +17,13 @@ post '/users' do
 end
 
 # Show
-get "/users/" do
+get "/users/:id" do
   authorize!
   @user = User.find(params[:id])
   if @user
     erb :'users/show'
   else
-    redirect "/users/"
+    redirect "/"
   end
 end
 
