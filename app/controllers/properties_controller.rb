@@ -48,7 +48,7 @@ get "/properties/:id/edit" do
   erb :"properties/edit"
 
 
-put "/properties/:id" do
+post "/properties/:id" do
  authorize!
 @property = Property.find(params[:id])
 if @property.update(params[:property])
