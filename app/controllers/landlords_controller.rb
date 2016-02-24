@@ -4,6 +4,7 @@ get '/landlords' do
   @landlords = Landlord.where("name ILIKE :search OR borough ILIKE :search", {search: "%#{params[:search]}%"})
   else
     @landlords = Landlord.all
+
   end
   erb :'landlords/index'
 end
@@ -12,6 +13,7 @@ end
 get '/landlords/new' do
   authorize!
   @landlord = Landlord.new
+  # @properties = Properties.all
   erb :'landlords/new'
 end
 
@@ -47,16 +49,16 @@ get "/landlords/:id/edit" do
   erb :"landlords/edit"
 end
 
-# Update
-post "/landlords/:id" do
+
+put "/landlords/:id" do
   authorize!
   @landlord = Landlord.find(params[:id])
   if @landlord.update(params[:landlord])
     redirect "/landlords/#{@landlord.id}"
   else
     erb :'landlords/show'
-    end
-  end  
+  end
+end  
 
 # Delete
 delete "/landlords/:id/delete" do

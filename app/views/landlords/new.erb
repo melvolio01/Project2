@@ -1,12 +1,12 @@
 <br>
 <br>
 
-<form id="new" method="post" action="/landlords/new">
+<form id="new" method="post" action="/landlords/<%= params[:id] %>/new">
   <div class="form-group">
-    <label for="name">Landlord Name</label>
-    <input name="landlord name" type="text"
-    class="form-control" id="landlord name"
-    placeholder="landlord name">
+    <label for="landlord[name]">Landlord Name</label>
+    <input name="landlord [name]" type="text"
+    class="form-control" id="landlord [name]"
+    placeholder="landlord [name]">
   </div>
 
   

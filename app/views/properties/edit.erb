@@ -3,12 +3,12 @@
 
 <form id="edit" method="post" action="/properties/<%= @property.id %>">
   <div class="form-group">
-    <label for="address1">1st line of address</label>
+    <label for="property[address1]">1st line of address</label>
     <input name="property[address1]" type="text" class="form-control" id="address1" placeholder="1st line of address"
     value="<%= @property.address1 %>" >
   </div>
   <div class="form-group">
-    <label for="address2">2nd line of address</label>
+    <label for="property[address2]">2nd line of address</label>
     <input name="property[address2]" type="text" class="form-control" id="address2" placeholder="2nd line of address"
     value="<%= @property.address2 %>">
   </div>
@@ -18,7 +18,7 @@
     value="<%= @property.postcode %>">
   </div>
   <div class="form-group">
-    <label for="profile_pic">Profile Pic</label>
+    <label for="property[property_image]">Property image</label>
     <input name="property[property_image]" type="file" class="form-control" id="property_image" placeholder="Property Image">
   </div>
   <div class="form-group">

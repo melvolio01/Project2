@@ -47,8 +47,8 @@ get "/properties/:id/edit" do
   @landlords = Landlord.all
   erb :"properties/edit"
 
-Update
-post '/properties/:id' do
+
+put "/properties/:id" do
  authorize!
 @property = Property.find(params[:id])
 if @property.update(params[:property])
@@ -57,7 +57,7 @@ if @property.update(params[:property])
     erb :'properties/show'
      end
   end
-end
+
 
 # Delete
 delete "/properties/:id/delete" do
@@ -65,4 +65,5 @@ delete "/properties/:id/delete" do
   @property = Property.find(params[:id])
   @property.destroy  
   redirect "/properties"
+  end
 end

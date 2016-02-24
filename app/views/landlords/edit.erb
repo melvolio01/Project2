@@ -1,9 +1,10 @@
 <h1>Landlords edit</h1>
 
 <form id="edit" method="post" action="/landlords/<%= @landlord.id %>">
+  <input type="hidden" name="_method" value="put">
   <div class="form-group">
-    <label for="name">Landlord Name</label>
-    <input name="landlord name" type="text"
+    <label for="landlord name">Landlord Name</label>
+    <input name="landlord[name]" type="text"
     class="form-control" id="landlord name"
     placeholder="landlord name"
     value="<%= @landlord.name %>">

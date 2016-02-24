@@ -11,8 +11,8 @@
 
 <% @landlords.each do |landlord| %>
   <ul>
-    <li>Name: <%= landlord.name %></li>
-    <li>Borough: <%= landlord.borough %></li>
+    <li>Name: <%= landlord.name %> </li>
+    <li>Borough: <%= landlord.borough %> </li>
 
     <a href="/landlords/<%= landlord.id %>">  Landlord info</a>
     <li><a href="/landlords/<%= landlord.id %>/edit">Edit</a></li>
