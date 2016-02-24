@@ -31,6 +31,8 @@ end
 # Show
 get '/landlords/:id' do
   @landlord = Landlord.find(params[:id])
+  @comments = @landlord.comments
+  @properties = @landlord.properties
   if @landlord
     erb :'landlords/show'
   else

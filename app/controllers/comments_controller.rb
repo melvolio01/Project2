@@ -1,7 +1,9 @@
 # New comment - to be added through the landlord pages of the site
 get '/landlords/:id/comments/new' do
   # authorize!
-  @comment = Comment.new(params[:comment])
+  landlord_id = params[:id]
+  landlord = Landlord.find(landlord_id)
+  @properties = landlord.properties
   erb :'comments/new'
   end
 

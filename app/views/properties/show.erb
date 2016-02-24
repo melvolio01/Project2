@@ -1,0 +1,14 @@
+<h2>Landlord Info:</h2>
+<% @property do %>
+  <ul>
+    <li>Address 1: <%= property.address1 %></li>
+    <li>Address 2: <%= property.address2 %></li>
+    <li>Postcode: <%= property.postcode %></li>
+    <li>Borough: <%= property.borough %></li>
+    <li>Property Image: <%= property.property_image %></li>
+    <% if property.landlord %>
+    <li>Landlord: <%= property.landlord.name %></li>
+    <% end %>
+
+
+<!-- |property|  -->

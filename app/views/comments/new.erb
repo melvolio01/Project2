@@ -2,7 +2,7 @@
 
 <form id="new" method="post" action="/landlords/new">
 
-  <ipnut type="hidden" name="comment[landlord_id]" value="<%= params[:id] %>">
+  <input type="hidden" name="comment[landlord_id]" value="<%= params[:id] %>">
   
   <div class="form-group">
     <label for="comment[issue]">Feedback</label>
@@ -19,8 +19,12 @@
   </div>
 
   <div class="form-group">
+    <label for="comment[property_id]">Property</label>
     <select name="comment[property_id]">
-    <!-- dropdown wiyth properties -->
+    <% @properties.each do |property| %>
+    <option value="<%= property.id %>"><%= property.address1 %></option>
+    <% end %>
+    <!-- dropdown with properties -->
     </select>
   </div>
 
