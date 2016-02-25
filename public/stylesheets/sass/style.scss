@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: #FFF3DE;
 }
 
 h1 {
@@ -22,10 +23,10 @@ ul {
 }
 
 .navbar-default {
-  // background-color: red;
-}
+  background-color: #253A61;
+  color: #F8F8F8;
 
-// HOMPAGE
+}
 
 section.home {
   margin-top: -20px;
@@ -37,3 +38,4 @@ section.home {
   width: 100%;
   height: 93vh;
 }
+
