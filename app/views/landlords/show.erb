@@ -1,12 +1,15 @@
 <h2>Landlord Info:</h2>
-<% @properties.each do |property| %>
+  <h3><%= @landlord.name %></h3>
   <h3>Properties owned:</h3>
+<% @properties.each do |property| %>
   <%= property.address1 %>,
   <%= property.address2 %>,
   <%= property.postcode %>
+  <br>
+
 <% end%>
 
-  <h3>User feedback:</h3> 
+  <h3>Feedback:</h3> 
 <% @comments.each do |comment| %>
   <% if comment.user %>
     <h4>Comment left by:</h4><%= comment.user.username %>
