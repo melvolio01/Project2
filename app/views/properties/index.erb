@@ -7,14 +7,14 @@
   <button class="btn btn-default">Go</button>
   </form>
 
+<li><a href="/properties/new">Add New Property</a></li>
 <li><a href="/properties">Back to property index</a></li>
 
 <% @properties.each do |property| %>
   <ul>
-    <li>Address 1: <%= property.address1 %></li>
+    <li>Address: <%= property.address1 %></li>
     <li>Postcode: <%= property.postcode %></li>
     <li>Borough: <%= property.borough %></li>
-    <li>Property Image: <%= property.property_image %></li>
     <li>Landlord: <%= property.landlord.name %></li> 
     
 
@@ -31,4 +31,4 @@
 
 <% end %>
 
-  <li><a href="/properties/new">Add New Property</a></li>
+ 

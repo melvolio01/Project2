@@ -8,7 +8,9 @@
 
   <h3>User feedback:</h3> 
 <% @comments.each do |comment| %>
+  <% if comment.user %>
+    <h4>Comment left by:</h4><%= comment.user.username %>
+  <% end %>
   <h4>Comment:</h4><%= comment.issue %>
   <h4>Rating:</h4> <%= comment.rating %>
-
 <% end%>

@@ -68,8 +68,6 @@ put "/properties/:id" do
 #   end
 # end  
 
-
-
 # Delete
 delete "/properties/:id/delete" do
   authorize!

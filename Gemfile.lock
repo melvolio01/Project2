@@ -93,6 +93,7 @@ DEPENDENCIES
   activerecord
   bcrypt
   carrierwave
+  json
   pg
   pry
   rake

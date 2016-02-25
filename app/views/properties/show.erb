@@ -5,8 +5,9 @@
     <li>Address 2: <%= @property.address2 %></li>
     <li>Postcode: <%= @property.postcode %></li>
     <li>Borough: <%= @property.borough %></li>
-    <li>Property Image: <%= @property.property_image %></li>
+    <li>Property Image: <img src="<%= @property.property_image.url %>"></li>
     <li>Landlord: <%= @property.landlord.name %></li>
   </ul>
 
+    <li><a href="/properties">Back to property index</a></li>
 

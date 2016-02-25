@@ -12,6 +12,7 @@ gem "sass"
 gem "sinatra-assetpack"
 gem "carrierwave"
 gem "bcrypt"
+gem "json"
 
 group :development do
   gem "tux", "~> 0.3.0"

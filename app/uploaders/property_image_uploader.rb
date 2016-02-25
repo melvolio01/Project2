@@ -1,4 +1,4 @@
-class ProfilePicUploader <CarrierWave::Uploader::Base
+class PropertyImageUploader <CarrierWave::Uploader::Base
   storage :file
 
   def store_dir
