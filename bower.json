@@ -1,0 +1,23 @@
+{
+  "name": "WDI_Project2",
+  "homepage": "https://github.com/melvolio01/Project2",
+  "authors": [
+    "andy hunt <andyhunt200@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  }
+}
