@@ -6,9 +6,15 @@
     <li>Postcode: <%= @property.postcode %></li>
     <li>Borough: <%= @property.borough %></li>
     <li>
-    <img src="<%= @property.property_image.url %>" width="300"></li>
+
+    <% if @property.property_image %>
+      <img src="<%= @property.property_image.url %>" width="300">
+    <% else %>
+      <img src="/images/defaultprop.jpg" width="300"> 
+    <% end %>
     <li>Landlord: <%= @property.landlord.name %></li>
   </ul>
 
-    <li><a href="/properties">Back to property index</a></li>
+    <a href="/properties">Back to property index</a>
+
 
