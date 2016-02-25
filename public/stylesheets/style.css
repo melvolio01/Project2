@@ -19,12 +19,11 @@ section.home { margin-top: -20px; background: url("/images/monopoly houses.jpg")
   padding-bottom: 10px;
   font-size: 20px;
   text-align: center;
+  position: absolute;
   width: 800px;
   height: 200px;
-  text-align: center;
   color: #22232A;
-  position: absolute;
   top: 50%;
   left: 50%;
-  margin: -200px 0 0 -330px;
+  margin: -100px 0 0 -400px;
 }

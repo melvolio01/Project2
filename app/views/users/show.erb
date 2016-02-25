@@ -2,7 +2,7 @@
 <% if @user.profile_pic %>
   <img src="<%= @user.profile_pic.url %>" width="300">
   <% else %>
-  <img src="public/images/default.png" image" width="300">
+  <img src="../images/default.png" width="300">
   <% end %>
 <p>Hi, <%= @user.username %></p>
 <p><%= @user.email_address %></p>
