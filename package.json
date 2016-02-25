@@ -1,0 +1,27 @@
+{
+  "name": "wdi_project2",
+  "version": "1.0.0",
+  "description": "Status at end of Monday Models are nearly done (tested in Tux), image upload should now be possible, together with additional user info, although error messages being returned at registration stage - looks as though the user model needs to be updated with email_address (rather than email), and profile_pic but will then hopefully work.",
+  "main": "index.js",
+   "dependencies": {
+    "bower": "1.7.x"
+  },
+  "engine": {
+    "node": "5.0.x",
+    "npm": "1.3.x"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melvolio01/Project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melvolio01/Project2/issues"
+  },
+  "homepage": "https://github.com/melvolio01/Project2#readme"
+}
