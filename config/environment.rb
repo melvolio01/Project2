@@ -12,9 +12,9 @@ assets do
     '/bower_components/bootstrap/dist/js/bootstrap.min.js'
   ]
   css :application, [
-    '/stylesheets/style.css',
-    '/bower_components/bootstrap/dist/css/bootstrap.min.css'
-
+    '/bower_components/bootstrap/dist/css/bootstrap.min.css',
+    '/stylesheets/style.css'
+  
   ]
   js_compression :jsmin
   css_compression :simple
