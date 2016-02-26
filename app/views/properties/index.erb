@@ -16,7 +16,7 @@
     <li>Address: <%= property.address1 %></li>
     <li>Postcode: <%= property.postcode %></li>
     <li>Borough: <%= property.borough %></li>
-    <li>Landlord: <%= property.landlord.name %> </li>
+    <li>Landlord: <%= property.landlord ? property.landlord.name : "Unknown" %> </li>
     
 
     <a href="/properties/<%= property.id %>">  Property info</a>
