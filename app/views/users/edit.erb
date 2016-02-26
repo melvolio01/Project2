@@ -7,15 +7,15 @@
   </div>
   <div class="form-group">
     <label for="profile_pic">Profile Pic</label>
-    <input name="user[profile_pic]" type="text" class="form-control" id="profile_pic" placeholder="profile_pic" value="<%= @user.profile_pic %>">
+    <input name="user[profile_pic]" type="file" class="form-control" id="profile_pic" placeholder="Profile Pic">
   </div>
   <div class="form-group">
     <label for="email_address">Email address</label>
-    <input name="user[email]" type="email_address" class="form-control" id="email_address" placeholder="Email" value="<%= @user.email_address %>">
+    <input name="user[email_address]" type="user[email_address]" class="form-control" id="user[email_address]" placeholder="Email" value="<%= @user.email_address %>">
   </div>
   <div class="form-group">
     <label for="password_digest">Password</label>
     <input name="user[password_digest]" type="password_digest" class="form-control" id="password" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-default">Register</button>
+  <button type="submit" class="btn btn-default">Update</button>
 </form>

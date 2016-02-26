@@ -32,9 +32,10 @@ get "/users/:id/edit" do
   authorize!
   @user = User.find(params[:id])
   erb :"users/edit"
+  end
 
 # Update
-put '/users/:id' do
+put "/users/:id" do
   authorize!
   @user = User.find(params[:id])
   if @user.update(params[:user])
@@ -43,4 +44,3 @@ put '/users/:id' do
     erb :'users/show'
     end
   end  
-end
