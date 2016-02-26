@@ -1,6 +1,5 @@
-# Project2
+# Project 2
 
-Status at end of Monday
 Models are nearly done (tested in Tux), image upload should now be possible, together with additional user info, although error messages being returned at registration stage - looks as though the user model needs to be updated with email_address (rather than email), and profile_pic but will then hopefully work.
 
 Work on views and controllers has also been started - easy wins (authentication, sessions, statics, layout.erb) done and have started on restful routes for properties (beginning with 'New', via placeholder 'index'), looks as though there are problems accessing any of these pages without registration - can authentication be adapted to be less restrictive? Alternatively could make whole site only accessible via login. 
@@ -21,5 +20,20 @@ The main issues to resolve on Wednesday are as follows:
 2. Having issues 'putting' information into the database, either by creation of new records (eg can make new property record but it shows as blank record on index page) or posting updates once edits done
 3. Comments - have added in fields so that comments can be added but, again, these aren't being rendered on the site
 4. Links between models - working on Tux so they should be OK, just getting confused re how to link, eg landlord/property ids through the site.
+
+
+
+Final notes
+
+What I learned? Think I now  have a much better grasp on how restful routes work in relation to Sinatra, on how to user controllers, views, models and migrations. Plenty that I'd like to do in relation to this but feeling much more confident in dealing with these now.
+
+I also think I have a better understanding of how migrations work (and why not to go backwards with them). I liked getting to grips with image uploaders 
+
+
+
+
+
+
+
 
 
