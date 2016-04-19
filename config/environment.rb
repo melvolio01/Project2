@@ -49,5 +49,5 @@ CarrierWave.configure do |config|
   end
 
   config.cache_dir = "#{APP_ROOT}/tmp/uploads" 
-  config.fog_directory    = ENV['AWS_BUCKET_NAME']
+  config.fog_directory = ENV['AWS_BUCKET_NAME']
 end
