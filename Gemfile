@@ -11,6 +11,7 @@ gem "pg"
 gem "sass"
 gem "sinatra-assetpack"
 gem "carrierwave"
+gem 'fog', '~> 1.0.0'
 gem "bcrypt"
 gem "json"
 
