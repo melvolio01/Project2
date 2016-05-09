@@ -13,11 +13,37 @@ ul { margin: 0; padding: 0; list-style: none; }
   opacity: 0.9;
 }
 
-section.home { margin-top: -20px; background: url("/images/voxpropmonop.png") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width: 100%; height: 93vh;}
+section.home { margin-top: -20px; background: url("/images/voxpropmonop.png") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; 
+-o-background-size: cover; 
+background-size: cover; 
+width: 100%; height: 100vh;}
 
 
 /*# sourceMappingURL=style.css.map */
-.jumbotron {
+.welcome {
+  background: rgba(210, 210, 210, 0.4);
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  max-width: 800px;
+  max-height: 200px;
+  color: #22232A;
+  margin-left: 35vw;
+  margin-top: 30vh;
+  opacity: 0.8;
+  /*margin: 0 auto;*/
+}
+
+.navbar navbar-default{
+  color: red;
+}
+/*# sourceMappingURL=style.css.map */
+/*.jumbotron {
   background: rgba(210, 210, 210, 0.4);
   padding-top: 10px;
   padding-left: 50px;
@@ -33,27 +59,7 @@ section.home { margin-top: -20px; background: url("/images/voxpropmonop.png") no
   left: 50%;
   opacity: 0.8;
   margin: -70px 0 0 -400px;
-}
-
-
-/*# sourceMappingURL=style.css.map */
-.jumbotron {
-  background: rgba(210, 210, 210, 0.4);
-  padding-top: 10px;
-  padding-left: 50px;
-  padding-right: 30px;
-  padding-bottom: 10px;
-  font-size: 20px;
-  text-align: center;
-  position: absolute;
-  width: 800px;
-  height: 200px;
-  color: #22232A;
-  top: 50%;
-  left: 50%;
-  opacity: 0.8;
-  margin: -70px 0 0 -400px;
-}
+}*/
 
 #main-button {
   background-color: #091869;
